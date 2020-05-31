@@ -28,12 +28,6 @@
       "email": "rob.tillaart@gmail.com"
     }
   ],
-  "dependencies":
-  {
-    "name": "OneWire",
-    "authors": "Paul Stoffregen",
-    "frameworks": "arduino"
-  },
   "version": "3.8.1",
   "frameworks": "arduino",
   "platforms": "*"

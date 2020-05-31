@@ -9,7 +9,6 @@
 // Released to the public domain
 //
 
-#include <OneWire.h>
 #include <DallasTemperature.h>
 
 #define ONE_WIRE_BUS      2

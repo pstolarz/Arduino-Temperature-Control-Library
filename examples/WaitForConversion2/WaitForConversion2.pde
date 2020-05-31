@@ -1,7 +1,6 @@
 //
 // Sample of using Async reading of Dallas Temperature Sensors
 // 
-#include <OneWire.h>
 #include <DallasTemperature.h>
 
 // Data wire is plugged into port 2 on the Arduino

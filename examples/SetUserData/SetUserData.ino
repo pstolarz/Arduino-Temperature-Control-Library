@@ -4,7 +4,6 @@
 // a specific ID.
 // 
 
-#include <OneWire.h>
 #include <DallasTemperature.h>
 
 // Data wire is plugged into port 2 on the Arduino

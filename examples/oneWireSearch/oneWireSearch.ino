@@ -14,7 +14,7 @@
 // 0.1.01 first published version
 // 0.1.02 small output changes
 
-#include <OneWire.h>
+#include <DallasTemperature.h>
 
 void setup()
 {
