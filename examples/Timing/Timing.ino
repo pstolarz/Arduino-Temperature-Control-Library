@@ -9,7 +9,6 @@
 // 0.0.1 = 2017-07-25 initial version
 // 0.0.2 = 2020-02-13 updates to work with current lib version
 
-#include <OneWire.h>
 #include <DallasTemperature.h>
 
 #define ONE_WIRE_BUS 2
