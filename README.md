@@ -1,8 +1,9 @@
 # Arduino Library for Maxim Temperature Integrated Circuits
 
-This is a fork of [DallasTemperature](https://github.com/milesburton/Arduino-Temperature-Control-Library)
+This is a fork of
+[DallasTemperature](https://github.com/milesburton/Arduino-Temperature-Control-Library)
 library with [OneWireNg](https://github.com/pstolarz/OneWireNg) as a 1-wire
-service.
+service. `OneWireNg` branch of the fork contains the ported library version.
 
 OneWireNg vs [OneWire](https://github.com/PaulStoffregen/OneWire) usage is
 controlled by `ONEWIRE_NG` macro-define. If it is set to non-zero value (default
