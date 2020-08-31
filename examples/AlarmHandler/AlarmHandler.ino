@@ -13,7 +13,7 @@ DallasTemperature sensors(&oneWire);
 DeviceAddress insideThermometer, outsideThermometer;
 
 // function that will be called when an alarm condition exists during DallasTemperatures::processAlarms();
-void newAlarmHandler(uint8_t* deviceAddress)
+void newAlarmHandler(const uint8_t* deviceAddress)
 {
   Serial.println("Alarm Handler Start"); 
   printAlarmInfo(deviceAddress);
@@ -29,7 +29,7 @@ void printCurrentTemp(DeviceAddress deviceAddress)
   Serial.println();
 }
 
-void printAddress(DeviceAddress deviceAddress)
+void printAddress(const DeviceAddress deviceAddress)
 {
   Serial.print("Address: ");
   for (uint8_t i = 0; i < 8; i++)
@@ -40,7 +40,7 @@ void printAddress(DeviceAddress deviceAddress)
   Serial.print(" ");
 }
 
-void printTemp(DeviceAddress deviceAddress)
+void printTemp(const DeviceAddress deviceAddress)
 {
   float tempC = sensors.getTempC(deviceAddress);
   if (tempC != DEVICE_DISCONNECTED_C)
@@ -52,7 +52,7 @@ void printTemp(DeviceAddress deviceAddress)
   Serial.print(" ");
 }
 
-void printAlarmInfo(DeviceAddress deviceAddress)
+void printAlarmInfo(const DeviceAddress deviceAddress)
 {
   char temp;
   printAddress(deviceAddress);
