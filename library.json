@@ -28,7 +28,13 @@
       "email": "rob.tillaart@gmail.com"
     }
   ],
-  "version": "3.8.1",
+  "dependencies":
+  {
+    "name": "OneWireNg",
+    "authors": "Piotr Stolarz",
+    "frameworks": "arduino"
+  },
+  "version": "3.9.0",
   "frameworks": "arduino",
   "platforms": "*"
 }
