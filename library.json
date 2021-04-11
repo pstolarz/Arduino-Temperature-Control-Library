@@ -30,7 +30,7 @@
   ],
   "dependencies":
   {
-    "pstolarz/OneWireNg": "^0.7.1"
+    "pstolarz/OneWireNg": ">=0.7.2"
   },
   "version": "3.9.1",
   "frameworks": "arduino",

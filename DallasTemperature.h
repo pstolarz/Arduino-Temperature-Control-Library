@@ -18,15 +18,8 @@
 #define REQUIRESALARMS true
 #endif
 
-// set to true to use OneWireNg instead on OneWire as 1-wire service library
-#ifndef ONEWIRE_NG
-#define ONEWIRE_NG true
-#endif
-
 #include <inttypes.h>
-#if ONEWIRE_NG
-#include <OneWireNg_Wrapper.h>
-#elif __STM32F1__
+#ifdef __STM32F1__
 #include <OneWireSTM.h>
 #else
 #include <OneWire.h>

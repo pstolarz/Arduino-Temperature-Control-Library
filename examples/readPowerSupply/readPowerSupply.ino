@@ -8,6 +8,8 @@
 // Released to the public domain
 //
 
+// Include the libraries we need
+#include <OneWire.h>
 #include <DallasTemperature.h>
 
 // Data wire is plugged into port 2 on the Arduino

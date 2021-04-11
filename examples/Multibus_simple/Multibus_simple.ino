@@ -1,3 +1,4 @@
+#include <OneWire.h>
 #include <DallasTemperature.h>
 
 OneWire ds18x20[] = { 3, 7 };

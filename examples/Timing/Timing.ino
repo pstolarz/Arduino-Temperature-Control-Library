@@ -10,6 +10,7 @@
 // 0.0.2    2020-02-13 updates to work with current lib version
 // 0.0.3    2020-02-20 added timing measurement of setResolution
 
+#include <OneWire.h>
 #include <DallasTemperature.h>
 
 #define ONE_WIRE_BUS 2
