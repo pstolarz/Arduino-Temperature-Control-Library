@@ -33,9 +33,10 @@
 #define DS28EA00MODEL 0x42
 
 // Error Codes
-#define DEVICE_DISCONNECTED_C -255
-#define DEVICE_DISCONNECTED_F -427
-#define DEVICE_DISCONNECTED_RAW -32640
+// See https://github.com/milesburton/Arduino-Temperature-Control-Library/commit/ac1eb7f56e3894e855edc3353be4bde4aa838d41#commitcomment-75490966 for the 16bit implementation. Reverted due to microcontroller resource constraints.
+#define DEVICE_DISCONNECTED_C -127
+#define DEVICE_DISCONNECTED_F -196.6
+#define DEVICE_DISCONNECTED_RAW -7040
 
 #define DEVICE_FAULT_OPEN_C -254
 #define DEVICE_FAULT_OPEN_F -425.199982
@@ -139,14 +140,23 @@ public:
 	void setCheckForConversion(bool);
 	bool getCheckForConversion(void);
 
+	struct request_t {
+		bool result;
+		unsigned long timestamp;
+
+		operator bool() {
+			return result;
+		}
+	};
+
 	// sends command for all devices on the bus to perform a temperature conversion
-	void requestTemperatures(void);
+	request_t requestTemperatures(void);
 
 	// sends command for one device to perform a temperature conversion by address
-	bool requestTemperaturesByAddress(const uint8_t*);
+	request_t requestTemperaturesByAddress(const uint8_t*);
 
 	// sends command for one device to perform a temperature conversion by index
-	bool requestTemperaturesByIndex(uint8_t);
+	request_t requestTemperaturesByIndex(uint8_t);
 
 	// returns temperature raw value (12 bit integer of 1/128 degrees C)
 	int32_t getTemp(const uint8_t*);
@@ -274,6 +284,8 @@ public:
 #endif
 
 	void blockTillConversionComplete(uint8_t);
+	void blockTillConversionComplete(uint8_t, unsigned long);
+	void blockTillConversionComplete(uint8_t, request_t);
 
 private:
 	typedef uint8_t ScratchPad[9];
