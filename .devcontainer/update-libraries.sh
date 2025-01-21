@@ -15,7 +15,7 @@ arduino-cli core install esp32:esp32
 
 # List of libraries to ensure are installed/updated
 LIBRARIES=(
-    "OneWire"
+    "OneWireNg"
     "ArduinoUnit"
 )
 
