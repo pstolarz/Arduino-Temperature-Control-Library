@@ -30,7 +30,7 @@
   ],
   "dependencies":
   {
-    "paulstoffregen/OneWire": "^2.3.5"
+    "pstolarz/OneWireNg": ">=0.10.0"
   },
   "version": "4.0.2",
   "frameworks": "arduino",
