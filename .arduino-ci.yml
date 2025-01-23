@@ -2,8 +2,8 @@ compile:
   platforms:
     - uno
   libraries:
-    - "OneWire"
+    - "OneWireNg"
 skip_unittest: true
 
 aux_libraries_for_ci:
-  - "OneWire"
+  - "OneWireNg"

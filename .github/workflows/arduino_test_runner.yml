@@ -27,7 +27,7 @@ jobs:
         
       - name: Install OneWire library
         run: |
-          arduino-cli lib install OneWire
+          arduino-cli lib install OneWireNg
       
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
