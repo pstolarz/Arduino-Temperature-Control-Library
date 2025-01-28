@@ -5,11 +5,11 @@ compile:
   platforms:
     - uno
   libraries:
-    - "OneWireNg"
+    - "OneWire"
 
 # Unit testing settings
 unittest:
   platforms:
     - uno
   libraries:
-    - "OneWireNg"
+    - "OneWire"

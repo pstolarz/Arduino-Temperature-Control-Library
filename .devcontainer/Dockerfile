@@ -41,7 +41,7 @@ RUN arduino-cli core install esp8266:esp8266 esp32:esp32
 
 # Install only required dependencies for DallasTemperature library and others
 RUN arduino-cli lib install \
-    "OneWireNg" \
+    "OneWire" \
     "ArduinoUnit"  # For testing
 
 # Verify library installation

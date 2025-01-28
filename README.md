@@ -13,5 +13,5 @@ library with [OneWireNg](https://github.com/pstolarz/OneWireNg) as a 1-wire
 service. `OneWireNg` branch of the fork contains the ported library version.
 
 The fork preserves upstream library sources with no modification. Only library side
-files (library descriptors, CI/CD scripts) are updated to point into OneWireNg as
+files (library descriptors, build scripts) are updated to point into OneWireNg as
 a 1-wire service library.
